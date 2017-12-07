@@ -24,8 +24,10 @@ func init() {
 }
 
 func main() {
-	if backupPath == "" {
-		fmt.Println("backupPath can not null")
+	if len(os.Args) < 3 {
+		fmt.Println(`commands:
+	-b    backup file path .
+	-d    file path  after analyse`)
 		return
 	}
 	mbdbPath := filepath.Join(backupPath, "Manifest.mbdb")
