@@ -93,6 +93,7 @@ func sha1s(s string) string {
 }
 
 func copyFile(domain, path string) {
+    fmt.Println("1234")
 	sha1 := sha1s(domain + "-" + path)
 	dest := filepath.Join(destPath, domain, path)
 	src := filepath.Join(backupPath, sha1)
